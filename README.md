@@ -31,7 +31,7 @@
 ### 7.  Next i created a databases with the command 
         CREATE DATABASE cybrox_db;
 ### 8.  Granting permissions to the created user 
-        GRANT ALL ON cybrox_db.* TO 'teejay'@'%' WITH GRANT OPTION;
+        GRANT ALL ON cybrox_db.* TO '<username>'@'%' WITH GRANT OPTION;
 ### 9.  Effecting Priviledges 
         FLUSH PRIVILEGES;
 ### 10. Editing Configuration files 
