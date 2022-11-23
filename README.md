@@ -19,7 +19,8 @@
         sudo apt install mysql-client
         
 ### 4.  Then i ran the security script to ensure my database is secure 
-         ALTER USER 'root'@'localhost' IDENTIFIED WITH                   mysql_native_password BY 'PassWord.1';
+         ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password.1';
+         
          sudo mysql_secure_installation
 
 ### 5.  Then i logged in to the database by running 
