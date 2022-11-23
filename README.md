@@ -8,9 +8,15 @@
         ssh -i "privatekey.pem" ubuntu@ec2<pub-ip>.compute-1.amazonaws.com
 
 ### 3.  I installed mysql-server on the db-server by running the following commands;
+        # For Server
         sudo apt update 
-        sudo apt upgrade -y 
+        sudo apt upgrade -y
         sudo apt install mysql-server 
+
+        # For Client
+        sudo apt update 
+        sudo apt upgrade -y
+        sudo apt install mysql-client
         
 ### 4.  Then i ran the security script to ensure my database is secure 
          ALTER USER 'root'@'localhost' IDENTIFIED WITH                   mysql_native_password BY 'PassWord.1';
