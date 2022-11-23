@@ -5,6 +5,7 @@
 ### 1.  The first step was to set up two virtual machines using AWS, one for the db-server and one for the db-client.
 
 ### 2.  Then I connected to both instances using SSH on port 22 on the security group of both instances 
+        ssh -i "privatekey.pem" ubuntu@ec2<pub-ip>.compute-1.amazonaws.com
 
 ### 3.  I installed mysql-server on the db-server by running the following commands;
         sudo apt update 
@@ -19,7 +20,7 @@
         sudo mysql -p 
 
 ### 6.  Then i created a database user for the client using the command 
-        CREATE USER 'teejay'@'%' IDENTIFIED WITH mysql_native_password BY 'Password.1';
+        CREATE USER 'username'@'%' IDENTIFIED WITH mysql_native_password BY 'Password.1';
 
 ### 7.  Next i created a databases with the command 
         CREATE DATABASE cybrox_db;
@@ -38,4 +39,30 @@
 ### 14. connecting to db-server from client using the code 
         sudo mysql -u teejay -h <private ip of dbserver> -p
 
+### 15. Creating the Virtual Machines on AWS Console
+        
+![](Instances%20Running.png)
 
+### 16. Securing DB-server 
+
+![](Securing%20Mysql%20Database.png)
+
+### 17. Creating Db-user on server 
+
+![](Creating%20Db%20user%20on%20server.png)
+
+### 18. Granting Permissions to DB-user 
+
+![](Granting%20permissions%20to%20Db-user.png)
+
+### 19. Setting Bind address to accept all ip address from client user
+
+![](SETTING%20BIND%20ADDRESS%20TO%20ALLOW%20ANYWHERE.png)
+
+### 20. Connected to DB-server from mysql-Client
+
+![](Connected%20to%20Db-server%20from%20client%20server.png)
+
+### 21. Showing available databases on db-server from mysql-client
+
+![](showing%20database%20available%20from%20client%20server.png)
